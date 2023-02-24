@@ -1,0 +1,9 @@
+from django.apps import AppConfig
+
+
+class ClientManagementConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'client_management'
+
+    def ready(self):
+        import client_management.signals
